@@ -17,8 +17,6 @@
         <div class="dropdown-content">
             <input type="button" value="Sort by name" onclick="sort();" />
 
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
         </div>
         <ul id="users" />
     </div>
@@ -60,12 +58,7 @@
         function sort() {
 
             $.getJSON('api/users?sort=firstName')
-                .done(function (data) {
-                    $('#users').text(formatItem(data));
-                })
-                .fail(function (jqXHR, textStatus, err) {
-                    $('#users').text('Error: User not found' + err);
-                });
+                
         }
 
 
